@@ -21,7 +21,14 @@ function App() {
           </li>
         </ul>
         <Switch>
-          <PrivateRoute exact path="/friends" component={FriendsList} />
+          <div className="list-container">
+            <PrivateRoute
+              exact
+              path="/friends"
+              component={FriendsList}
+              className="list-container"
+            />
+          </div>
           <Route path="/login" component={Login} /> <Route component={Login} />
         </Switch>
       </div>
